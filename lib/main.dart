@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Body.dart';
+import 'body.dart';
 
 void main() {
   runApp(PrintName());

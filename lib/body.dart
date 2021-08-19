@@ -28,23 +28,27 @@ class _BodyState extends State<Body> {
         SizedBox(
           height: 50,
         ),
-        Image(
-          image: AssetImage('assets/zuri.jpeg'),
-          height: 80,
-          width: 150,
+        Expanded(
+          child: Image(
+            image: AssetImage('assets/zuri.jpeg'),
+            height: 80,
+            width: 150,
+          ),
         ),
         SizedBox(
           height: 20,
         ),
         Expanded(
-          child: Text(
-            'Let\'s play a simple game',
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 30,
-                letterSpacing: 1.5,
-                fontFamily: 'OpenSansCondensed-Light',
-                fontWeight: FontWeight.bold),
+          child: Center(
+            child: Text(
+              'Let\'s play a simple game',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 30,
+                  letterSpacing: 1.5,
+                  fontFamily: 'OpenSansCondensed-Light',
+                  fontWeight: FontWeight.bold),
+            ),
           ),
         ),
 
@@ -59,33 +63,36 @@ class _BodyState extends State<Body> {
             ),
           ),
         ),
-        // SizedBox(
-        //   height: 50,
-        // ),
-        Container(
-          child: GestureDetector(
-            onTap: () {
-              printName();
-              print('pressed');
-            },
-            child: Center(
-              child: Text(
-                'Print my name',
-                style: TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.bold),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Container(
+                    child: Center(
+                      child: TextButton(
+                        onPressed: () {
+                          setState(() {
+
+                          });
+                        },
+                        child: Text(
+                          'Print my name',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white
+                          ),
+                        ),
+                      ),
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(15),
+
+                    ),
+
+                  ),
+                ),
               ),
-            ),
-          ),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: Colors.black,
-          ),
-          height: 50,
-          width: 200,
-        ),
-        SizedBox(
-          height: 50,
-        ),
         Expanded(
           child: Container(
             child: Text(
